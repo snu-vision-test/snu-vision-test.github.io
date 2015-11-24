@@ -1,5 +1,5 @@
-<!-- Portfolio Grid Section -->
-<section id="portfolio" class="bg-light-gray">
+<!-- Publications Section -->
+<section id="{{ page.section-type }}" class="bg-light-gray">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -12,6 +12,8 @@
             <div class="col-md-4 col-sm-6 portfolio-item">
               {% if publication.project %}
                 <a href="{{ publication.project }}" class="portfolio-link" data-toggle="modal">
+              {% elsif publication.pdf %}
+                <a href="{{ publication.pdf }}" class="portfolio-link" data-toggle="modal">
               {% else %}
                 <a href="{{ publication.img }}" class="portfolio-link" data-toggle="modal">
               {% endif %}
