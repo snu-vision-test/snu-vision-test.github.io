@@ -1,12 +1,12 @@
 url: https://snu-vision-test.github.io
 # baseurl: /agency-jekyll-theme/
-google-tracking-id: "UA-42933442-2"
+google-tracking-id: "UA-64119252-1"
 
 # Forces https everywhere in your website, except when you serve it locally
 # If you are not hosted on Github Pages, and your host doesn't support https
 # then you should disable it
 
-#force-https: True
+# force-https: True
 
 collections:
   - people
@@ -14,9 +14,9 @@ collections:
   - publications
 
 # HTML Head
-title: "SNU Vision Lab"
+title: "Vision & Learning Lab"
 lang: en
-description: "Vision Lab - Seoul National University"
+description: "Vision and Learning, Seoul National University"
 keywords: "SNU, Seoul National University, Vision Lab, Computer Vision, Vision, Machine Learning, Learning, Deep Learning, Big Data, Gunhee Kim"
 favicon: /img/favicon.ico
 
@@ -48,7 +48,6 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Vision and Learning Lab. Department of Computer Science and Engineering Seoul National University
   - line: Room 420-2, 302 Building
   - line: 1 Gwanak-ro, Gwanak-gu Seoul 151-744 Republic of Korea
   - line: "TEL: +82-02-880-7289"

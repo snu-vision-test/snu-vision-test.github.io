@@ -1,30 +1,42 @@
-Agency Jekyll theme
+Vision and Learning Lab, Seoul National University.
 ====================
 
 Agency theme based on [Agency bootstrap theme ](http://startbootstrap.com/templates/agency/)
 
 # How to use
 
-###Portfolio 
-
-Portfolio projects are in '/_posts'
-
-Images are in '/img/portfolio'
-
 ###About
+contents are written in about.html file.
 
-Images are in '/img/about/'
+###People
 
-###Team
+People descriptions are in '/_people'. You can add any details in here.
+#####WARNING
+Please keep the file format. First two numbers are reserved for
+> 00: professor
+> 01: post-doc / researchers
+> 02: Ph.D.
+> 03: MS/Ph.D.
+> 04: MS
+> 05: Undergraduate Student
+> 06: Supporters
+> 07: Alumni
 
-Team members and info are in '_config.yml'
+Images are in '/img/people'.
+#####WARNING
+Please do upload a 220x220 image.
 
-Images are in '/img/team/'
+###Publications
 
+Detailed information about a publication is stored in '/_publications'. You can add or edit any information in here.
+#####WARNING
+Please keep the file format once you add a new publication. (yyyy-order-name)
 
-# Demo
+Images are in '/img/publications' (or from other pages)
 
-View this jekyll theme in action [here](https://y7kim.github.io/agency-jekyll-theme)
+###Courses
+
+Each course information are stored in '/_courses'.
 
 =========
 For more details, read [documentation](http://jekyllrb.com/)

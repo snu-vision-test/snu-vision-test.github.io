@@ -1,10 +1,14 @@
   <footer class="bg-light-gray">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; {{ site.title }} 2015</span>
+                <div class="col-md-5">
+                    <p class="text-muted text-left">
+                    {% for address_line in site.address %}
+                      {{ address_line.line }}</br>
+                    {% endfor %}
+                    </p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <ul class="list-inline social-buttons">
                         {% for network in site.social %}
                         <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
@@ -12,13 +16,8 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
+                <div class="col-md-5">
+                    <span class="copyright">Copyright &copy; {{ site.title }} 2015</span>
                 </div>
             </div>
         </div>

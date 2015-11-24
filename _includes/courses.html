@@ -10,7 +10,7 @@
         <div class="row text-center">
             {% for course in site.courses reversed %}
             <div class="col-lg-10 col-lg-offset-1">
-                <a href="{{ course.url }}"><h4 class="service-heading">{{ course.name }}</h4></a>
+                <a href="{{ course.page-url }}"><h4 class="service-heading">{{ course.name }}</h4></a>
                 <p class="text-muted">{{course.semester}}, {{course.year}}({{course.school}})</p>
             </div>
             {% endfor %}
