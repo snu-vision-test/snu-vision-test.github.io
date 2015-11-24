@@ -8,5 +8,5 @@ social:
   - title: home
     url: http://vision.snu.ac.kr/cesc/
   - title: github
-    url: https://github.com/pcs2024
+    url: https://github.com/cesc-park
 ---
