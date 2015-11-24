@@ -1,14 +1,29 @@
 <!-- Header -->
 <header>
+  <div class="flex-container-header">
     <div class="flexslider-header">
       <ul class="slides">
-        {% for publication in site.publications limit:3 %}
+        {% assign rev_pubs = site.publications | reverse %}
+        {% for publication in rev_pubs limit:{{site.num_publications_slide}} %}
         <li>
           <img src="{{ publication.img }}">
+          <p class="flex-caption text-muted">
+            {{ publication.name }}
+            {% if publication.author %}
+              <br/>
+              {% for author in publication.author %}
+                {% if forloop.last %}, and {% else %}{% unless forloop.first %}, {% endunless %}{% endif %}{{author.name}}
+              {% endfor %}
+            {% endif %}
+            {% if publication.book %}
+              ({{ publication.book }})
+            {% endif %}
+          </p>
         </li>
         {% endfor %}
       </ul>
     </div>
+  </div>
 </header>
 <!--
         {% for page in site.pages %}

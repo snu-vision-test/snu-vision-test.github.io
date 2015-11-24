@@ -1,10 +1,12 @@
 // Initialise FlexSlider for Carousels
 $(window).load(function() {
     $('.flexslider-lab').flexslider({
-    namespace: "flex-lab-"
+    animation: "slide",
+    controlNav: true,
+    controlsContainer: ".flex-container-header"
     });
-    
+
     $('.flexslider-header').flexslider({
-    namespace: "flex-header-"
+    namespace: "flex-header-",
     });
 });

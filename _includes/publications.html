@@ -29,19 +29,19 @@
                     <p class="text-muted">
                     {% if publication.duration %}
                       {{ publication.duration}}
-                      <br/>
                     {% endif %}
                     {% if publication.comment %}
+                      <br/>
                       {{ publication.comment}}
                     {% endif %}
                     {% if publication.author %}
                       {% for author in publication.author %}
-                        {% if forloop.last %}, and{% else %}{% unless forloop.first %}, {% endunless %}{% endif %}
+                        {% if forloop.last %}, and {% else %}{% unless forloop.first %}, {% endunless %}{% endif %}
                         {% if author.link %}<a href="{{ author.link }}">{% endif %}{{author.name}}{% if author.link %}</a>{% endif %}{% if author.school %}({{ author.school}}){% endif %}
                       {% endfor %}
-                      <br/>
                     {% endif %}
                     {% if publication.book %}
+                      <br/>
                       {{ publication.book }}
                     {% endif %}
                     {% if publication.pdf %}
