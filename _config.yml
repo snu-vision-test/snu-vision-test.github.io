@@ -18,7 +18,7 @@ title: "SNU Vision Lab"
 lang: en
 description: "Vision Lab - Seoul National University"
 keywords: "SNU, Seoul National University, Vision Lab, Computer Vision, Vision, Machine Learning, Learning, Deep Learning, Big Data, Gunhee Kim"
-#favicon:
+favicon: /img/favicon.ico
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
