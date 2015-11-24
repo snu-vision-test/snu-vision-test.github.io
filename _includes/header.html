@@ -1,28 +1,47 @@
 <!-- Header -->
 <header>
-  <div class="flex-container-header">
-    <div class="flexslider-header">
-      <ul class="slides">
-        {% assign rev_pubs = site.publications | reverse %}
-        {% for publication in rev_pubs limit:{{site.num_publications_slide}} %}
-        <li>
-          <img src="{{ publication.img }}">
-          <p class="flex-caption text-muted">
-            {{ publication.name }}
-            {% if publication.author %}
-              <br/>
-              {% for author in publication.author %}
-                {% if forloop.last %}, and {% else %}{% unless forloop.first %}, {% endunless %}{% endif %}{{author.name}}
-              {% endfor %}
-            {% endif %}
-            {% if publication.book %}
-              ({{ publication.book }})
-            {% endif %}
-          </p>
-        </li>
-        {% endfor %}
-      </ul>
+  <div id="header-carousel" class="carousel slide header-carousel" data-ride="carousel">
+    <ol class="carousel-indicators">
+      {% assign index_max = site.num_publications_slide | plus:'-1' %}
+      {% for i in (0..{{index_max}}) %}
+        {% if forloop.first %}
+          <li data-target="#header-carousel" data-slide-to="{{ i }}" class="active"></li>
+        {% else %}
+          <li data-target="#header-carousel" data-slide-to="{{ i }}"></li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner header-carousel-inner">
+      {% assign rev_pubs = site.publications | reverse %}
+      {% for publication in rev_pubs limit:{{site.num_publications_slide}} %}
+        {% if forloop.first %}
+          <div class="item active">
+        {% else %}
+          <div class="item">
+        {% endif %}
+          <img src="{{ publication.img }}"/>
+          <a href="{{ publication.project }}">
+            <div class="carousel-caption header-carousel-caption">
+              <h3>{{ publication.name }}</h3>
+              <p>{% if publication.author %}
+                    {% for author in publication.author %}
+                      {% if forloop.last %}, and {% else %}{% unless forloop.first %}, {% endunless %}{% endif %}{{author.name}}
+                    {% endfor %}
+                  {% endif %}
+                  {% if publication.book %}
+                    ({{ publication.book }})
+                  {% endif %}</p>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
     </div>
+    <a class="left carousel-control" href="#header-carousel" data-slide="prev">
+      <span class="fa fa-chevron-left fa-2x"></span>
+    </a>
+    <a class="right carousel-control" href="#header-carousel" data-slide="next">
+      <span class="fa fa-chevron-right fa-2x"></span>
+    </a>
   </div>
 </header>
 <!--

@@ -6,16 +6,24 @@
                 <h2 class="section-heading">{{ page.title }}</h2>
                 <h3 class="section-subheading text-muted">{{ page.content | markdownify }}
                   {% if page.group-picture %}
-                  <div class="col-lg-6 col-lg-offset-3 flex-lab-container">
-                    <div class="flexslider-lab">
-                      <ul class="slides">
-                        {% for slide in page.group-picture %}
-                        <li>
-                          <img src="img/group_picture/{{ slide }}" class="img-responsive img-centered">
-                        </li>
-                        {% endfor %}
-                      </ul>
-                    </div>
+                  <div id="group-carousel" class="carousel slide group-carousel col-lg-6 col-lg-offset-3" data-ride="carousel">
+                    <div class="carousel-inner group-carousel-inner">
+                      {% for slide in page.group-picture %}
+                        {% if forloop.first %}
+                          <div class="item active">
+                        {% else %}
+                          <div class="item">
+                        {% endif %}
+                            <img src="img/group_picture/{{ slide }}"/>
+                          </div>
+                      {% endfor %}
+                          </div>
+                    <a class="left carousel-control" href="#group-carousel" data-slide="prev">
+                      <span class="fa fa-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#group-carousel" data-slide="next">
+                      <span class="fa fa-chevron-right"></span>
+                    </a>
                   </div>
                   {% endif %}
                 </h3>
