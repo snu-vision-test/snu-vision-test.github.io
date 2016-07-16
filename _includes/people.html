@@ -40,7 +40,7 @@
                     <p class="large text-muted">{{ member.content | markdownify }}</p>
                     <ul class="list-inline social-buttons">
                         {% for network in member.social %}
-                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
+                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a></li>
                         {% endfor %}
                     </ul>
                 </div>

@@ -38,13 +38,13 @@ pages_list:
   Courses: 'courses'
 
 # number of recent papers scrolled in flexslider
-num_publications_slide: 5
+num_publications_slide: 3
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 
 social:
   - title: github
-    url: http://github.com/snu-vision-test
+    url: https://github.com/snuvl
 
 # Postal address (add as many lines as necessary)
 address:

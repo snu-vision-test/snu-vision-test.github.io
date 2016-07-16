@@ -2,7 +2,7 @@
 layout: people
 section-type: people
 name: "Gunhee Kim"
-img-url: gunhee.jpg
+img-url: gunhee2.png
 position: "Professor"
 social:
   - title: home

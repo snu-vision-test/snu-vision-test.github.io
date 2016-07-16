@@ -556,6 +556,7 @@ footer ul.quicklinks {
 
 ul.social-buttons {
     margin-bottom: 0;
+    min-height: 40px;
 }
 
 ul.social-buttons li a {
